@@ -71,8 +71,15 @@ public class Main {
   }
 
   public static void main(final String[] args) {
-    assert (batteryIsOk(25, 70, 0.7f) == true);
-    assert (batteryIsOk(50, 85, 0.0f) == false);
-    System.out.println("Some more tests needed");
+    MainTest test = new MainTest();
+    test.tempFailureHighLimit();
+    test.tempFailureLowLimit();
+    test.tempSuccess();
+    test.socFailureHighLimit();
+    test.socFailureLowLimit();
+    test.socSuccess();
+    test.crFailure();
+    test.crSuccess();
+    test.allParamsFailure();
   }
 }

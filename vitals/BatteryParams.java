@@ -3,9 +3,12 @@ package vitals;
 public enum BatteryParams {
 
                            TEMP("Temperature"),
-                           SOC("State of Charge"),
-                           CR("Charge Rate"),
-                           OUT_OF_RANGE(" is out of range!");
+                           SOC("StateOfCharge"),
+                           CR("ChargeRate"),
+                           WARNING_RANGE("WarningRange"),
+                           FULL_RANGE("FullRange"),
+                           WARNING("Warning"),
+                           OUT_OF_RANGE("OutOfRange");
 
   private String displayText;
 

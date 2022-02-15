@@ -22,7 +22,7 @@ public class Battery {
   private static float chargeRateUpperLimit = 0.8f;
 
   public static ResourceBundle getResourceBundle(final Locale locale) {
-    return ResourceBundle.getBundle("Vitals.BatteryParams", locale);
+    return ResourceBundle.getBundle("vitals.BatteryParams", locale);
   }
 
   public static float getTempUpperLimit() {

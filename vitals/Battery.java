@@ -97,11 +97,6 @@ public class Battery {
     test.crFailure();
     test.crSuccess();
     test.allParamsFailure();
-    test.tempWarning();
-    test.socWarning();
-    test.crWarning();
-    test.deLangContents();
-    test.enLangContents();
   }
 }
 

@@ -32,8 +32,8 @@ public class BatteryTest {
   }
 
   public void tempSuccess() {
-    float randomTempWithinRange = this.minTemp + (this.random.nextFloat() * (this.maxTemp - this.minTemp));
-    assert (Battery.batteryIsOk(randomTempWithinRange, this.maxSoc, this.maxCR) == true);
+    float randomTempWithinRange =this.random.nextFloat() * (this.maxTemp - this.minTemp);
+    assert (Battery.batteryIsOk(randomTempWithinRange, 40, 0.5f) == true);
   }
 
   public void socFailureHighLimit() {
@@ -45,8 +45,7 @@ public class BatteryTest {
   }
 
   public void socSuccess() {
-    float randomSocWithinRange = this.minSoc + (this.random.nextFloat() * (this.maxSoc - this.minSoc));
-    assert (Battery.batteryIsOk(this.maxTemp, randomSocWithinRange, this.maxCR) == true);
+    assert (Battery.batteryIsOk(20, 40, 0.5f) == true);
   }
 
   public void crFailure() {
@@ -55,7 +54,7 @@ public class BatteryTest {
 
   public void crSuccess() {
     float randomCRWithinRange = this.random.nextFloat() * (this.maxCR);
-    assert (Battery.batteryIsOk(this.maxTemp, this.maxSoc, randomCRWithinRange) == true);
+    assert (Battery.batteryIsOk(20, 40, randomCRWithinRange) == true);
   }
 
   public void allParamsFailure() {

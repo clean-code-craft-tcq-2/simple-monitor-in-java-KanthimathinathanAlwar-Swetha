@@ -65,28 +65,28 @@ public class BatteryTest {
   public void tempWarning() {
     setUpStreams();
     Battery.batteryIsOk(45, 58, 0.5f);
-    assert ("Temperatur Warnung : Entlade-/Ladespitze nähert sich".equals(this.outContent.toString()));
+    assert ("Temperatur Warnung : Entlade-/Ladespitze nahert sich".equals(this.outContent.toString()));
     restoreStreams();
   }
 
   public void socWarning() {
     setUpStreams();
     Battery.batteryIsOk(40, 78, 0.5f);
-    assert ("Ladezustand Warnung : Entlade-/Ladespitze nähert sich".equals(this.outContent.toString()));
+    assert ("Ladezustand Warnung : Entlade-/Ladespitze nahert sich".equals(this.outContent.toString()));
     restoreStreams();
   }
 
   public void crWarning() {
     setUpStreams();
     Battery.batteryIsOk(40, 58, 0.8f);
-    assert ("Ladestrom Warnung : Entlade-/Ladespitze nähert sich".equals(this.outContent.toString()));
+    assert ("Ladestrom Warnung : Entlade-/Ladespitze nahert sich".equals(this.outContent.toString()));
     restoreStreams();
   }
 
   public void deLangContents() {
     setUpStreams();
     Battery.batteryIsOk(46, 80, 0.8f);
-    assert ("Temperatur Warnung : Entlade-/Ladespitze nähert sich".equals(this.outContent.toString()));
+    assert ("Temperatur Warnung : Entlade-/Ladespitze nahert sich".equals(this.outContent.toString()));
     restoreStreams();
   }
 

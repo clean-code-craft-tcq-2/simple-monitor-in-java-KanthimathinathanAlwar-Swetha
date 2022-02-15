@@ -17,6 +17,6 @@ jobs:
       with:
         java-version: 1.8
     - name: Build
-      run: javac vitals/Main.java
+      run: javac vitals/Battery.java
     - name: Verify
-      run: java -ea -classpath . vitals.Main
+      run: java -ea -classpath . vitals.Battery
